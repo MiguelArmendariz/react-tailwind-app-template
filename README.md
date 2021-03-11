@@ -1,6 +1,6 @@
-# react-app-template-yarn
+# react-tailwind-app-template
 This project is a basic template for a react application using webpack, and
-YARN as package manager. That's why the repository name has YARN at the end.
+YARN as package manager.
 
 ## Content
 * Webpack configuration for local and prebuild.
