@@ -43,8 +43,22 @@ module.exports = env => {
           },
           // -- Styles
           {
+            test: /\.css$/,
+            exclude: /node_modules/,
+            use: [
+              { loader: 'style-loader' },
+              {
+                loader: 'css-loader',
+                options: {
+                  importLoaders: 1,
+                }
+              },
+              { loader: 'postcss-loader' },
+            ]
+          },
+          {
             test: /\.scss$/,
-            exclude: /\.module.scss$/,
+            exclude: /\.module.scss$|node_modules/,
             use: [
               PLATFORM === 'production'
                 ? MiniCssExtractPlugin.loader
@@ -54,7 +68,7 @@ module.exports = env => {
             ],
           },
           {
-            test: /\.module.scss$/,
+            test: /\.module.scss$|node_modules/,
             use: [
               {
                 loader:
