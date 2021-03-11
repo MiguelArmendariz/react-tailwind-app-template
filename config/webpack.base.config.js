@@ -44,17 +44,11 @@ module.exports = env => {
           // -- Styles
           {
             test: /\.css$/,
-            exclude: /node_modules/,
             use: [
-              { loader: 'style-loader' },
-              {
-                loader: 'css-loader',
-                options: {
-                  importLoaders: 1,
-                }
-              },
-              { loader: 'postcss-loader' },
-            ]
+              'style-loader',
+              { loader: 'css-loader', options: { importLoaders: 1 } },
+              'postcss-loader',
+            ],
           },
           {
             test: /\.scss$/,
@@ -68,7 +62,8 @@ module.exports = env => {
             ],
           },
           {
-            test: /\.module.scss$|node_modules/,
+            test: /\.module.scss$/,
+            exclude: /node_modules/,
             use: [
               {
                 loader:
