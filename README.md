@@ -20,6 +20,7 @@ import styles from 'FileName.module.scss';
 
 <div className={styles.YourClass}> Bla bla bla </div>
 ```
+**THIS NEEDS NODE 12.13.0**
 
 #### Recommendations
 
