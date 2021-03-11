@@ -8,18 +8,14 @@ YARN as package manager.
 * Src folder without file structuring.
 * Babel configuration to work with react.
 * Eslint with basic configuration **using Wesbos**
-* The template currently works with SCSS but you can easily add configuration to support CSS files.
+* The template works with both css and scss, but is highly recommended to use tailwind.
 * MIT license.
 
 #### Important Notes
 
-* The **src folder** contains an App folder similar to create-react-app.
-* To use scss modules create a file with a name: ```FileName.module.scss```, this way you can use it like:
-```
-import styles from 'FileName.module.scss';
+When you run yarn first and start the project you should see some headers but **without** styles,
+they should look identical.
 
-<div className={styles.YourClass}> Bla bla bla </div>
-```
 **THIS NEEDS NODE 12.13.0**
 
 #### Recommendations
