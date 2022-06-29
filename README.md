@@ -1,3 +1,5 @@
+# This project is no longer being mantained as I opted to use tailwindcss + yarn + typescript in my projects.
+
 # react-tailwind-app-template
 This project is a basic template for a react application using webpack, and
 YARN as package manager.
